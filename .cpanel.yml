@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home3/fkwxcbmy/public_html/kdshendge.com/files/software2/
+    - /bin/cp -R * $DEPLOYPATH
