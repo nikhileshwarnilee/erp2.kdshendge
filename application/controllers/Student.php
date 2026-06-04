@@ -823,11 +823,7 @@ class Student extends Admin_Controller
 
                         $this->student_model->studentUpdateByID($insert_id, $update_student_data);
 
-                        $upload_dir_path  = $this->customlib->getFolderPath() . './uploads/student_documents/' . $insert_id . '/';
                         $upload_directory = './uploads/student_documents/' . $insert_id . '/';
-                        if (!is_dir($upload_dir_path) && !mkdir($upload_dir_path)) {
-                            die("Error creating folder $upload_dir_path");
-                        }
 
                         $docs = [
                             'first_doc'  => 'first_title',
@@ -1349,11 +1345,7 @@ class Student extends Admin_Controller
                     $this->student_model->add($update_student);
                 }
 
-                $upload_dir_path  = $this->customlib->getFolderPath() . './uploads/student_documents/' . $insert_id . '/';
                 $upload_directory = './uploads/student_documents/' . $insert_id . '/';
-                if (!is_dir($upload_dir_path) && !mkdir($upload_dir_path)) {
-                    die("Error creating folder $upload_dir_path");
-                }
 
                 if (isset($_FILES["first_doc"]) && !empty($_FILES['first_doc']['name'])) {
 
